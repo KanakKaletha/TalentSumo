@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  </head>
+  <body>
+    <header>
+      <img src="{% static 'img/icon.png' %}" alt="Icon">
+      <nav>
+        <ul>
+            {% if not user.is_authenticated %}
+              <li><a href="{% url 'login' %}">Login</a></li>
+              <li><a href="{% url 'signup' %}">Sign up</a></li>
+            {% endif %}
+
+          </ul>
+        </nav>
+      </header>
+    {% block content %}{% endblock %}
+  </body>
+</html>
+
+
+{% include "footer.html"%}

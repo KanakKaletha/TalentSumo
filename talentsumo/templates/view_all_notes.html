@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>All Notes</h1>
+  <ol>
+    {% for note in notes %}
+      <li>
+        <a href="{% url 'view_note' note.id %}">{{ note.title }}</a>
+        <a href="{% url 'edit_note' note.id %}">✏️</a>
+        <a href="{% url 'share_note' note.id %}">🔗</a>
+        <form method="post" action="{% url 'edit_note' note.id %}" style="display: inline;">
+          {% csrf_token %}
+          <button type="submit" name="delete" style="background: none; border: none; cursor: pointer;">🗑️</button>
+        </form>
+      </li>
+    {% endfor %}
+  </ol>
+{% endblock %}

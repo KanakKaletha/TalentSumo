@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    {% comment %} <meta charset="UTF-8">
+    <title>TalentSumo Assignment</title> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+  </head>
+  <body>
+    <header>
+      <img src="{% static 'img/icon.png' %}" alt="Icon">
+      <nav>
+        <ul>
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'create_note' %}">Create Note</a></li>
+          <li><a href="{% url 'view_all_notes' %}">All Notes</a></li>
+          <li><a href="{% url 'profile' %}">Profile</a></li>
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+    </header>       
+    <main>
+     
+    </main>
+  </body>
+</html>

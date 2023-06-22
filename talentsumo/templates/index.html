@@ -1,0 +1,10 @@
+{% extends 'baseone.html' %}
+
+{% block content %}
+<h1 style="font-family: 'Comic Sans MS', cursive; font-size: 32px;">Welcome to TalentSumo Assignment</h1>
+  <ul style="list-style-type: none;">
+    <li><a href="{% url 'login' %}" style="font-family: 'Comic Sans MS', cursive; font-size: 22px;">Login</a></li>
+    <li><a href="{% url 'signup' %}" style="font-family: 'Comic Sans MS', cursive; font-size: 22px;">Sign up</a></li>
+  </ul>
+
+{% endblock %}
