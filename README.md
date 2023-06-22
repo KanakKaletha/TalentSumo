@@ -1,10 +1,10 @@
+# TalentSumo Assignment
+
+Django project "talentsumo":
+
 # TalentSumo
 
-Sure! Here's a README for your Django project "talentsumo":
-
-# TalentSumo
-
-TalentSumo is a Django-based web application that allows users to create, view, edit and share notes. The notes can be in the form of text, audio or video.
+"talentsumo" assignment is a Django-based web application that allows users to create, view, edit and share notes. The notes can be in the form of text, audio or video.
 
 ## Features
 
